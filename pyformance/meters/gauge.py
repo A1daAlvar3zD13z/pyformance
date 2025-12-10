@@ -74,4 +74,4 @@ class SimpleGauge(Gauge):
         self._value = value
 
 
-AnyGauge = Gauge[float | int]
+AnyGauge = Gauge
