@@ -290,9 +290,9 @@ class RegexRegistry(MetricsRegistry):
     def counter(self, key: str) -> Counter:
         return super(RegexRegistry, self).counter(self._get_key(key))
 
-    def gauge[T: float | int](
-        self, key: str, gauge: Gauge[T] | Callable[[], T] | None = None, default: float = float("nan")
-    ) -> AnyGauge:
+    def gauge(
+        self, key, gauge=None, default=float("nan")
+    ):
         return super(RegexRegistry, self).gauge(self._get_key(key), gauge, default)
 
     def meter(self, key: str) -> Meter:
