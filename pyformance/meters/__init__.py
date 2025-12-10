@@ -20,7 +20,8 @@ from .gauge import CallbackGauge, Gauge, SimpleGauge
 from .histogram import Histogram
 from .meter import Meter
 from .timer import Timer
+from .base_metric import BaseMetric
 
-__all__ = ["Counter", "CallbackGauge", "Gauge", "SimpleGauge", "Histogram", "Meter", "Timer"]
+__all__ = ["Counter", "CallbackGauge", "Gauge", "SimpleGauge", "Histogram", "Meter", "Timer", "BaseMetric"]
 
-any_meter = Histogram | Meter | Gauge | Timer | Counter
+any_meter = Histogram | Meter | Gauge | Timer | Counter | BaseMetric
