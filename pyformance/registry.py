@@ -339,11 +339,11 @@ def clear() -> None:
     return _global_registry.clear()
 
 
-def get_qualname[**P, R](obj: Callable[P, R]) -> str:
+def get_qualname(obj) -> str:
     return obj.__qualname__
 
 
-def count_calls[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
+def count_calls(fn):
     """
     Decorator to track the number of times a function is called.
 
@@ -362,7 +362,7 @@ def count_calls[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
     return wrapper
 
 
-def meter_calls[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
+def meter_calls(fn):
     """
     Decorator to the rate at which a function is called.
 
@@ -381,7 +381,7 @@ def meter_calls[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
     return wrapper
 
 
-def hist_calls[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
+def hist_calls(fn):
     """
     Decorator to check the distribution of return values of a function.
 
@@ -403,7 +403,7 @@ def hist_calls[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
     return wrapper
 
 
-def time_calls[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
+def time_calls(fn):
     """
     Decorator to time the execution of the function.
 
