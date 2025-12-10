@@ -97,6 +97,9 @@ class ExpDecayingSample(Sample):
         priority = self._weight(self.clock.time() - self.start_time) / random.random()
         new_counter = self.counter + 1
         self.counter = new_counter
+        
+        print("new_counter:", new_counter)
+        print("size:", self.size)
 
         if int(new_counter) <= int(self.size):
             self.values[priority] = value
