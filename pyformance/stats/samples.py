@@ -101,7 +101,7 @@ class ExpDecayingSample(Sample):
         print("new_counter:", new_counter)
         print("size:", self.size)
 
-        if int(new_counter) <= int(self.size):
+        if new_counter <= int(self.size):
             self.values[priority] = value
             heapq.heappush(self.priorities, priority)
         else:
