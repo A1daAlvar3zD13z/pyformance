@@ -98,7 +98,7 @@ class ExpDecayingSample(Sample):
         new_counter = self.counter + 1
         self.counter = new_counter
 
-        if new_counter <= self.size:
+        if int(new_counter) <= int(self.size):
             self.values[priority] = value
             heapq.heappush(self.priorities, priority)
         else:
