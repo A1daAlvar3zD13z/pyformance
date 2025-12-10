@@ -25,7 +25,7 @@ from .meters import CallbackGauge, Counter, Gauge, Histogram, Meter, SimpleGauge
 from .meters.gauge import AnyGauge
 from .meters.timer import TimerSink
 
-type serialized_meter = Mapping[str, str | int | float]
+serialized_meter = Mapping[str, str | int | float]
 
 
 class MetricsRegistry:
