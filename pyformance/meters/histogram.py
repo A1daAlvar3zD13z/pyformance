@@ -45,10 +45,11 @@ class Histogram(object):
         super(Histogram, self).__init__()
         self.lock = Lock()
         self.clock = clock
-        
+        print("$"*56)
         print("Initializing Histogram with size:", size)
         print("alpha:", alpha)
         print("clock:", clock)
+        print("&"*56)
         
         if sample is None:
             sample = ExpDecayingSample(size, alpha, clock)
