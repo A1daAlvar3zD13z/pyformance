@@ -22,5 +22,5 @@ setup(
     packages=find_packages(),
     data_files=[],
     scripts=[],
-    python_requires=">=3.12",  # also update classifiers
+    python_requires=">=3.10",  # also update classifiers
 )
