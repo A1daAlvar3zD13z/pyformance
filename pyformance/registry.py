@@ -98,8 +98,8 @@ class MetricsRegistry:
             self._histograms[key] = Histogram(clock=self._clock)
         return self._histograms[key]
 
-    def gauge[T: float | int](
-        self, key: str, gauge: Gauge[T] | Callable[[], T] | None = None, default: float = float("nan")
+    def gauge(
+        self, key, gauge = None, default= float("nan")
     ) -> AnyGauge:
         out: AnyGauge
         if key not in self._gauges:
